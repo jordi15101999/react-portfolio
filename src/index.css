@@ -7,6 +7,10 @@
     src: url("./assets/Burtons.otf")
 }
 
+body{
+    font-family: 'Sora', sans-serif;
+}
+
 .deved {
         position: absolute;
         top: 0;
@@ -15,11 +19,23 @@
         height: 100%;
 }
 
-.icon-container {
-    display: inline-block;
+
+
+.icon {
     transition: transform 0.3s ease-in-out;
 }
 
 .icon:hover {
-    transform: scale(1.2) rotate(360deg);
+    animation: spin 0.7s linear;
+    transform: scale(1.2);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

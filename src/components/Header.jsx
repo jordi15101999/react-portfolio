@@ -4,6 +4,7 @@ import { saveAs } from "file-saver";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillInstagram, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import man from "../assets/man.png";
+import TypeAnimation from "./TypeAnimation";
 
 const Header = ({ darkMode, setDarkMode }) => {
   const handleDownload = () => {
@@ -15,8 +16,8 @@ const Header = ({ darkMode, setDarkMode }) => {
   };
 
   return (
-    <section className=" min-h-screen">
-      <nav className="py-10 mb-12 flex justify-between">
+    <section className="min-h-full">
+      <nav className="py-10 flex justify-between">
         <h1 className="text-xl font-burtons dark:text-gray-200">JohJor</h1>
         <ul className="flex items-center">
           <li>
@@ -35,51 +36,53 @@ const Header = ({ darkMode, setDarkMode }) => {
           </li>
         </ul>
       </nav>
-      <div className="text-center p-10">
-        <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-          Johannes Jordi
-        </h2>
-        <h3 className="text-2xl py-2 md:text-3xl dark:text-gray-200">
-          Junior Website Developer
-        </h3>
-        <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
-          Freelancer providing services for FrontEnd programming and design
-          UI/UX needs. Join me down below and let's get cracking!
-        </p>
-      </div>
-      <div className="text-5xl flex justify-center gap-16 py-3 dark:text-white">
-        <a
-          href="https://www.instagram.com/johjordi/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-container"
-        >
-          <AiFillInstagram className="text-pink-600 icon" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/johannes-jordi-8a583417a/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-container"
-        >
-          <AiFillLinkedin className="text-blue-700 icon" />
-        </a>
-        <a
-          href="https://github.com/jordi15101999"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="icon-container"
-        >
-          <AiFillGithub className="icon" />
-        </a>
-      </div>
-      <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 shadow-lg overflow-hidden md:h-96 md:w-96 dark:shadow-white">
-        <img
-          className="deved"
-          style={{ objectFit: "cover" }}
-          src={man}
-          alt="yoi"
-        />
+      <div className="flex flex-col items-center justify-center py-10 lg:flex lg:flex-row gap-10 lg:mb-10 border-b-2 lg:border-none">
+        <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 shadow-lg overflow-hidden md:h-96 md:w-96 dark:shadow-white">
+          <img
+            className="deved"
+            style={{ objectFit: "cover" }}
+            src={man}
+            alt="yoi"
+          />
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-3xl py-2 text-teal-600 font-medium text-center md:text-3xl">
+            <TypeAnimation
+              sequence={["Johannes Jordi", "Junior Front-End Developer"]}
+              delay={3000}
+            />
+          </h2>
+          <p className="text-md py-5 text-left leading-8 text-gray-800 md:text-lg max-w-lg mx-auto dark:text-gray-200">
+            Freelancer providing services for FrontEnd programming and design
+            UI/UX needs. Join me down below and let's get cracking!
+          </p>
+          <div className="text-5xl flex justify-center gap-8 dark:text-white">
+            <a
+              href="https://www.instagram.com/johjordi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
+              <AiFillInstagram className="text-pink-600 icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/johannes-jordi-8a583417a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
+              <AiFillLinkedin className="text-blue-700 icon" />
+            </a>
+            <a
+              href="https://github.com/jordi15101999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-container"
+            >
+              <AiFillGithub className="icon" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

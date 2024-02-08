@@ -1,25 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-import {
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoReact,
-  IoLogoJavascript,
-  IoLogoFigma,
-} from "react-icons/io5";
+import { HiCode } from "react-icons/hi";
+import SkillCard from "./SkillCard";
+import MarqueeElement from "./MarqueeElement";
+import { STACKS } from "./Stacks";
 
 const Services = () => {
+  const stacksInArray = Object.entries(STACKS).sort(() => Math.random() - 0.5);
   return (
     <section className="mb-10">
       <div>
-        <h3 className="text-3xl py-10 dark:text-gray-200">What can I do?</h3>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-          Hello there! I'm Johannes Jordi, a freelance website developer
+          Hello there! I'm Johannes Jordi, a junior Front-End website developer
           passionate about building captivating digital experiences. My
           expertise lies in creating dynamic company profile websites, sleek
-          single-page applications, and polished personal profiles. Proficient
-          in{" "}
+          single-page applications, polished personal profiles, and develop
+          front-end website using javascript libraries. Proficient in{" "}
           <span className="text-teal-500">
-            React.js, Javascript, Bootstrap, and Tailwind CSS
+            HTML, CSS, Javascript, React, Bootstrap, Tailwind CSS, and Sass
           </span>
         </p>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -32,40 +29,28 @@ const Services = () => {
           your concepts into visually stunning and functional web solutions!
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 gap-10 md:grid-cols-2">
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white h-auto">
-          <div className="flex justify-center">
-            <IoLogoHtml5 className="text-5xl text-orange-500" />
-            <IoLogoCss3 className="text-5xl text-blue-600" />
+      <div className="space-y-6 mt-10">
+        <div className="space-y-2">
+          <div className="flex items-center space-x-2 dark:text-white">
+            <HiCode className="text-2xl" />
+            <p className=" text-xl font-semibold">Skills</p>
           </div>
-          <h3 className="text-lg font-medium pt-8 pb-2 ">HTML & CSS</h3>
-          <p className="py-2 text-teal-600">
-            I usually using framework for CSS like Bootstrap , Materialize CSS,
-            and Tailwind CSS.
-          </p>
         </div>
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white h-auto">
-          <div className="flex justify-center">
-            <IoLogoJavascript className="text-5xl text-yellow-300" />
-            <IoLogoReact className="text-5xl text-blue-400" />
-          </div>
-          <h3 className="text-lg font-medium pt-8 pb-2">
-            JavaScript & ReactJS
-          </h3>
-          <p className="py-2 text-teal-600">
-            I can write code with Javascript, for styling animation or function
-            on simple project, or using framework React JS for bigger project.
-          </p>
-        </div>
-        <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white h-auto">
-          <IoLogoFigma className="text-5xl mx-auto" />
-          <h3 className="text-lg font-medium pt-8 pb-2">
-            UI/UX Design ( Figma )
-          </h3>
-          <p className="py-2 text-teal-600">
-            For design project before development. I use figma for UI design and
-            protoype.
-          </p>
+
+        <div className="flex flex-col space-y-1 overflow-x-hidden">
+          {Array.from({ length: 2 }, (_, index) => {
+            const slider = [...stacksInArray].sort(() => Math.random() - 0.5);
+            return (
+              <MarqueeElement
+                key={index}
+                direction={index % 2 === 0 ? "left" : "right"}
+              >
+                {slider.map(([name, icon], index) => (
+                  <SkillCard key={index} name={name} icon={icon} />
+                ))}
+              </MarqueeElement>
+            );
+          })}
         </div>
       </div>
     </section>
