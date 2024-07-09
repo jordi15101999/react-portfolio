@@ -40,7 +40,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 shadow-lg overflow-hidden md:h-96 md:w-96 dark:shadow-white">
           <img
             className="deved"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             src={man}
             alt="yoi"
           />
@@ -48,12 +48,12 @@ const Header = ({ darkMode, setDarkMode }) => {
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-3xl py-2 text-teal-600 font-medium text-center md:text-3xl">
             <TypeAnimation
-              sequence={["Johannes Jordi", "Junior Front-End Developer"]}
+              sequence={["Johannes Jordi", "Fullstack Developer"]}
               delay={3000}
             />
           </h2>
           <p className="text-md py-5 text-left leading-8 text-gray-800 md:text-lg max-w-lg mx-auto dark:text-gray-200">
-            Freelancer providing services for FrontEnd programming and design
+            Freelancer providing services for Fullstack Development and design
             UI/UX needs. Join me down below and let's get cracking!
           </p>
           <div className="text-5xl flex justify-center gap-8 dark:text-white">

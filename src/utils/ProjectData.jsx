@@ -1,6 +1,14 @@
 export const PROJECTS = [
   {
     id: 1,
+    nama: "POS App",
+    gambar: "web9.png",
+    bahasa: "Electron.js, React.js, TailwindCSS",
+    github: "#",
+    link: "https://localhost:5173/",
+  },
+  {
+    id: 2,
     nama: "Blog App",
     gambar: "web8.png",
     bahasa: "MongoDB, Express.js, React.js, Node JS, TailwindCSS",
@@ -8,7 +16,7 @@ export const PROJECTS = [
     link: "https://localhost:5173/",
   },
   {
-    id: 2,
+    id: 3,
     nama: "Football Top Leagues Standings",
     gambar: "web1.png",
     bahasa: "React.js, Bootstrap, Vite ",
@@ -16,7 +24,7 @@ export const PROJECTS = [
     link: "https://standings-topleagues.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     nama: "Cashier App",
     gambar: "web3.png",
     bahasa: "React.js, Json, Bootstrap, SweetAlert",
@@ -24,7 +32,7 @@ export const PROJECTS = [
     link: "https://jj-cashier.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     nama: "ChatApp with Firebase",
     gambar: "web4.png",
     bahasa: "React.js, Firebase, TailwindCSS",
@@ -32,7 +40,7 @@ export const PROJECTS = [
     link: "https://jj-chat.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     nama: "Attendance App ( Final Project )",
     gambar: "web5.png",
     bahasa: "CodeIgniter, JavaScript, Bootstrap, MySql ",
@@ -40,7 +48,7 @@ export const PROJECTS = [
     link: "#",
   },
   {
-    id: 6,
+    id: 7,
     nama: "Personal Portfolio",
     gambar: "web6.png",
     bahasa: "React.js, TailwindCSS, Vite",
@@ -48,7 +56,7 @@ export const PROJECTS = [
     link: "https://portfolio-johjordi.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     nama: "Company Profile",
     gambar: "web7.png",
     bahasa: "HTML, MaterializeCSS, JavaScript",

@@ -10,13 +10,13 @@ const Services = () => {
     <section className="mb-10">
       <div>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-          Hello there! I'm Johannes Jordi, a junior Front-End website developer
+          Hello there! I'm Johannes Jordi, a Software Developer
           passionate about building captivating digital experiences. My
           expertise lies in creating dynamic company profile websites, sleek
-          single-page applications, polished personal profiles, and develop
-          front-end website using javascript libraries. Proficient in{" "}
+          single page applications, landing page website,polished personal profiles, and develop
+          fullstack <span className="text-teal-500">Website</span> and frontend <span className="text-teal-500">Desktop App</span> using javascript libraries. Proficient in{" "}
           <span className="text-teal-500">
-            HTML, CSS, Javascript, React, Bootstrap, Tailwind CSS, and Sass
+            HTML, CSS, Javascript, Express.js, Spring Boot( Java ), React.js, Electron.js, Angular.js, Bootstrap, Tailwind CSS, and Sass
           </span>
         </p>
         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">

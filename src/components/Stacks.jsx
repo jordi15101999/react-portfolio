@@ -23,6 +23,8 @@ import {
   SiMysql,
   SiCodeigniter,
   SiAxios,
+  SiElectron, 
+  SiAngularjs,
   // SiChakraui,
   //   SiExpo,
   //   SiGraphql,
@@ -60,6 +62,9 @@ export const STACKS = {
   CodeIgniter: <SiCodeigniter size={iconSize} className="text-orange-500" />,
   MaterializeCSS: <DiMaterializecss size={iconSize} className="text-red-400" />,
   Axios: <SiAxios size={iconSize} className="text-purple-400" />,
+  "Electron.js": <SiElectron size={iconSize} className="text-sky-500" />,
+  "Angular.js": <SiAngularjs size={iconSize} className="text-red-500" />,
+
   // ChakraUI: <SiChakraui size={iconSize} className="text-teal-500" />,
   //   TypeScript: <SiTypescript size={iconSize} className="text-blue-400" />,
   //   Redux: <SiRedux size={iconSize} className="text-purple-500" />,
