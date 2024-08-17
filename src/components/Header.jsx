@@ -26,14 +26,14 @@ const Header = ({ darkMode, setDarkMode }) => {
               className="cursor-pointer text-2xl dark:text-gray-200"
             />
           </li>
-          <li>
+          {/* <li>
             <p
               onClick={handleDownload}
               className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 cursor-pointer"
             >
               CV
             </p>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div className="flex flex-col items-center justify-center py-10 lg:flex lg:flex-row gap-10 lg:mb-10 border-b-2 lg:border-none">
